@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/assests/recycle1.png">
+  <title>HCI assignment - 3366422 Etornam Kordzo Ahiataku</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top shadow">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand justify-content-center fw-semibold">
+        <img width="40" height="40" src="https://img.icons8.com/clouds/100/recycle-sign.png" alt="recycle-sign"/> EcoCycle
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+           <ul class="navbar-nav justify-content-end">
+             <li class="nav-item" title="See recycling guidelines">
+               <a href="#HowToRecycle" class="nav-link fw-semibold"><i class="bi bi-recycle text-success"></i> How To Recycle</a>
+             </li>
+             <li class="nav-item" title="Find a center near you">
+               <a href="#Location" class="nav-link fw-semibold"><i class="bi bi-geo-alt-fill text-success"></i> Center Near Me</a>
+             </li>
+             <li class="nav-item" title="Take a Quiz on recycling">
+               <a href="#quiz" class="nav-link fw-semibold"><i class="bi bi-patch-question-fill text-success"></i> Quiz</a>
+             </li>
+           </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Headline-->
+  <section id="intro" style="padding: 60px; ">
+    <div class="row justify-content-center py-3 mt-2">
+      <div class="col-md-5 py-5 mt-1 text-center text-md-start">
+        <h1>
+          <div class="display-1 text-success">EcoCycle</div>
+          <div class="display-6 text-muted">Recycle Right, every time!</div>
+        </h1>
+        <p class="lead my-4 text-muted lh-base">
+          Make a positive impact on our planet today with our easy to use recycling guide.
+          Learn what you can recycle, how to prepare it and where to take it. <br>
+          Get started today and join the EcoCycle movement towards a more sustainable future.
+        </p>
+        <a href="#HowToRecycle" class="btn btn-success shadow btn-lg m-1">
+          <i class="bi bi-recycle p-1"></i> Show me how
+        </a>
+      </div>
+      <div class="col-md-5 py-1 mt-1 text-center d-none d-md-block">
+        <img width="500" height="500" src="assests/recycle1.png" alt="recycle-sign"/>
+      </div>
+    </div>
+  </section>
+
+  <!--How to recycle-->
+  <section id="HowToRecycle" style="padding:0px; ">
+    <div class="container-lg">
+        <img width="80" height="80" src="https://img.icons8.com/office/80/waste-separation.png" alt="waste-separation" class="mx-auto d-block"/> &nbsp; 
+      <h2 class="text-center text-success mb-4"> 
+        Type of materials & How to recycle them
+      </h2>
+      <p class="lead text-center text-secondary">
+        click on each section to view recycling guidelines
+      </p>
+      <div class="accordion accordion-flush" id="recycleAccordion">
+        <!-- Plastic -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPlastic">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlastic" aria-expanded="false" aria-controls="collapsePlastic">
+                <i class="bi bi-dice-1-fill text-danger"></i> &nbsp; Plastic 
+            </button>
+          </h2>
+          <div id="collapsePlastic" class="accordion-collapse collapse" aria-labelledby="headingPlastic" data-bs-parent="#recycleAccordion">
+            <div class="accordion-body">
+              <strong class="text-danger">Plastic ( Harmful ):</strong> Rinse containers to remove food residue, remove caps if required, and flatten items to save space. Always check the recycling code (typically a number inside a triangle) to determine if it’s accepted by your local recycling program. <br>
+                  <ul class="mt-2">
+                    <li class="py-2"><strong>Prepare:</strong> Rinse out food residue from bottles, containers, and packaging. Remove lids, labels, and any non-plastic parts.</li>
+                    <li class="py-2"><strong>Bag:</strong> Allow items to dry completely, then place them in a clear, designated recycling bag or container (avoid overfilling).</li>
+                    <li class="py-2"><strong>Recycle:</strong> Place the bag into your curbside recycling bin or drop it off at a local recycling center that accepts plastics. Check local guidelines for specific sorting and recycle limits.</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Wood -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingWood">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWood" aria-expanded="false" aria-controls="collapseWood">
+                <i class="bi bi-dice-1-fill text-primary"></i> &nbsp; Wood 
+            </button>
+          </h2>
+          <div id="collapseWood" class="accordion-collapse collapse" aria-labelledby="headingWood" data-bs-parent="#recycleAccordion">
+            <div class="accordion-body">
+              <strong class="text-primary">Wood (Enviromentally safe):</strong> Only recycle untreated, clean wood. Treated or painted wood may contain chemicals and should be disposed of through specialized facilities. When possible, consider repurposing wood for DIY projects or contact local centers to see if they offer wood chipping or mulch recycling services.
+              <ul class="mt-2">
+                <li class="py-2"><strong>Prepare:</strong> Remove nails, screws, and any metal hardware from scrap wood. Cut or break larger pieces into smaller, manageable sizes if needed.</li>
+                <li class="py-2"><strong>Bag:</strong> Large wood pieces typically aren’t bagged; however, small wood scraps can be bundled or placed in a paper bag if your recycling program requires it.</li>
+                <li class="py-2"><strong>Recycle:</strong> Bring the wood to a facility that accepts wood waste or consider repurposing it (e.g., as mulch or for DIY projects).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Metal -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMetal">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMetal" aria-expanded="false" aria-controls="collapseMetal">
+                <i class="bi bi-dice-1-fill text-warning"></i> &nbsp; Metal 
+            </button>
+          </h2>
+          <div id="collapseMetal" class="accordion-collapse collapse" aria-labelledby="headingMetal" data-bs-parent="#recycleAccordion">
+            <div class="accordion-body">
+              <strong class="text-warning">Metal (Harmful):</strong> Metals like aluminum and steel are highly recyclable. Rinse containers to remove food residue and, if recommended, crush them to save space. Some facilities may require you to sort metals by type. Check with your local recycling center for specific instructions.
+              <ul class="mt-2">
+                <li class="py-2"><strong>Prepare:</strong> Clean metal cans and containers by rinsing away any residues. Flatten aluminum cans to save space.</li>
+                <li class="py-2"><strong>Bag:</strong> For smaller metal items, place them into a paper bag (plastic bags can trap contaminants) or collect them loose in a dedicated container.</li>
+                <li class="py-2"><strong>Recycle:</strong> Deposit metals in the metal/recycling bin if your local service accepts them, or take them to a scrap metal collection center.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Organic -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOrganic">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOrganic" aria-expanded="false" aria-controls="collapseOrganic">
+                <i class="bi bi-dice-1-fill text-success"></i> &nbsp; Organic (Food & Yard Waste)
+            </button>
+          </h2>
+          <div id="collapseOrganic" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#recycleAccordion">
+            <div class="accordion-body">
+              <strong class="text-success">Organic (Potential bio-hazard):</strong> Organic waste such as food scraps, yard trimmings, and paper can be composted rather than sent to a landfill. Use a backyard compost bin or take advantage of community curbside compost programs. Composting turns waste into nutrient-rich soil for gardening.
+              <ul class="mt-2">
+                <li class="py-2"><strong>Prepare:</strong> Separate organic waste (e.g., food scraps, yard trimmings) from non-compostables. Chop larger items into smaller pieces to speed up decomposition.</li>
+                <li class="py-2"><strong>Bag:</strong> Use a compostable bag or add the organic waste directly to your compost bin.</li>
+                <li class="py-2"><strong>Recycle:</strong> For home composting, add to your compost pile; otherwise, follow local guidelines for organic waste recycling or drop off at a community compost facility.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Glass -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingGlass">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGlass" aria-expanded="false" aria-controls="collapseGlass">
+                  <i class="bi bi-dice-1-fill text-secondary"></i> &nbsp; Glass
+              </button>
+            </h2>
+            <div id="collapseGlass" class="accordion-collapse collapse" aria-labelledby="headingGlass" data-bs-parent="#recycleAccordion">
+              <div class="accordion-body">
+                <strong class="text-secondary">Glass (Caution when handling):</strong> Glass is 100% recyclable and can be recycled endlessly without loss of quality, but proper preparation is key.
+                <ul class="mt-2">
+                    <li class="py-2"><strong>Prepare:</strong> Rinse glass containers thoroughly to remove any food or liquid residues.</li>
+                    <li class="py-2"><strong>Bag:</strong> Many local facilities require you to sort glass by color (clear, green, brown) for efficient processing—check your local guidelines.</li>
+                    <li class="py-2"><strong>Recycle:</strong> Remove any lids, caps, or non-glass attachments; these may need to be recycled separately.</li>
+                    <li class="py-2"><strong>Extra Tip: </strong> Avoid placing broken glass in bins. Use a sturdy container for drop-off to minimize breakage and injury risks.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Location Centers Near Me-->
+  <section id="Location" style="padding: 60px; ">
+    <div class="row justify-content-center py-3 mt-2">
+    <div class="col-md-5 py-1 mt-1 text-center d-none d-md-block">
+          <img width="500" height="500" src="https://img.icons8.com/clouds/500/google-maps.png" alt="google-maps"/>
+    </div>
+      <div class="col-md-5 py-5 mt-1 text-center text-md-start">
+        <h1>
+          <div class="display-4 text-success"><i class="bi bi-recycle text-success"></i> Centers Around Me</div>
+          <div class="display-6 text-muted">Find recycling plant near you</div>
+        </h1>
+        <p class="lead my-4 text-muted lh-base">
+          Click the button below to view the map
+        </p>
+        <a  class="btn btn-success shadow btn-lg m-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <i class="bi bi-geo-alt-fill p-1"></i> Locate Now
+        </a>
+  
+  <!-- Google Map Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- using modal-lg for a larger map view -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-success" id="staticBackdropLabel">Find Recycling Centers Around You</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- The map will be loaded into this div --><!--Due to API cost. Actual implementation disaplayed temporary. LOL :)-->
+          <!--<div id="map" style="height:400px; width:100%;"></div>-->
+
+          <!--HArd coded map using Iframe 🤣 in your face google-->
+          <iframe class="ratio ratio-1x1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.70562949574!2d-1.632851562820679!3d6.672415471291539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb952b23159345%3A0x3583d0f584c61f52!2sEwaste%20Cycle%20Solutions!5e0!3m2!1sen!2sgh!4v1740358778151!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--Quiz-->
+  <section id="quiz" >
+    <div class="container-lg">
+
+        <div class="row">
+            <h2 class="text-center text-success">Recycling Quiz</h2>
+            <p class="lead text-center text-muted">Feeling positive about keeping our planet healthy? &nbsp;😊 <br>Take a short quiz to test your recycling knowledge!</p>
+            <form id="quizForm">
+                <div class="col justify-content-center">
+                   <!-- Question 1 -->
+                   <fieldset class="mb-3">
+                     <legend>1. Which of the following is <strong>not</strong> recyclable?</legend>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                       <label class="form-check-label" for="q1a">Paper</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                       <label class="form-check-label" for="q1b">Glass</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                       <label class="form-check-label" for="q1c">Food waste</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q1" id="q1d" value="d">
+                       <label class="form-check-label" for="q1d">Aluminum</label>
+                     </div>
+                   </fieldset>
+                   <!-- Question 2 -->
+                   <fieldset class="mb-3">
+                     <legend>2. What should you do before recycling plastic containers?</legend>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q2" id="q2a" value="a">
+                       <label class="form-check-label" for="q2a">Rinse them</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+                       <label class="form-check-label" for="q2b">Crush them</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+                       <label class="form-check-label" for="q2c">Leave them dirty</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q2" id="q2d" value="d">
+                       <label class="form-check-label" for="q2d">Remove their labels</label>
+                     </div>
+                   </fieldset>
+               </div>
+      
+               <div class="col justify-content-center">
+                   <!-- Question 3 -->
+                   <fieldset class="mb-3">
+                     <legend>3. What symbol is commonly used to indicate that an item is recyclable?</legend>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q3" id="q3a" value="a">
+                       <label class="form-check-label" for="q3a">Mobius loop</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+                       <label class="form-check-label" for="q3b">Red triangle</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+                       <label class="form-check-label" for="q3c">Star</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q3" id="q3d" value="d">
+                       <label class="form-check-label" for="q3d">Square</label>
+                     </div>
+                   </fieldset>
+                   <!-- Question 4 -->
+                   <fieldset class="mb-3">
+                     <legend>4. Which type of plastic is most widely accepted in recycling programs?</legend>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q4" id="q4a" value="a">
+                       <label class="form-check-label" for="q4a">PET (Type 1)</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q4" id="q4b" value="b">
+                       <label class="form-check-label" for="q4b">PVC (Type 3)</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q4" id="q4c" value="c">
+                       <label class="form-check-label" for="q4c">Polycarbonate (Type 7)</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q4" id="q4d" value="d">
+                       <label class="form-check-label" for="q4d">None of the above</label>
+                     </div>
+                   </fieldset>
+               </div>
+      
+               <div class="col justify-content-end">
+                   <!-- Question 5 -->
+                   <fieldset class="mb-3">
+                     <legend>5. Recycling helps to reduce which of the following?</legend>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q5" id="q5a" value="a">
+                       <label class="form-check-label" for="q5a">Landfill waste</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q5" id="q5b" value="b">
+                       <label class="form-check-label" for="q5b">Energy consumption</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q5" id="q5c" value="c">
+                       <label class="form-check-label" for="q5c">Pollution</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="q5" id="q5d" value="d">
+                       <label class="form-check-label" for="q5d">All of the above</label>
+                     </div>
+                   </fieldset>
+               </div>
+      
+               <div id="quizResult" class="mt-3"></div>
+
+              <div class="text-center pb-5">
+                <button type="submit" class="btn btn-success me-3">Submit Quiz</button>
+                <button type="button" id="resetQuiz" class="btn btn-danger ">Reset Quiz</button>
+              </div>
+            </form>
+        </div>
+
+
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Quiz Script -->
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Define the correct answers
+      const answers = {
+        q1: 'c',
+        q2: 'a',
+        q3: 'a',
+        q4: 'a',
+        q5: 'd'
+      };
+
+      let score = 0;
+      const totalQuestions = 5;
+
+      // Check each question's selected answer
+      for (let key in answers) {
+        const selected = document.querySelector('input[name="' + key + '"]:checked');
+        if (selected && selected.value === answers[key]) {
+          score++;
+        }
+      }
+
+      // Display the result
+      const resultDiv = document.getElementById('quizResult');
+      resultDiv.innerHTML = '<div class="alert alert-info">You scored ' + score + ' out of ' + totalQuestions + '!</div>';
+    });
+
+    // Reset Quiz Button
+    document.getElementById('resetQuiz').addEventListener('click', function() {
+      document.getElementById('quizForm').reset();
+      document.getElementById('quizResult').innerHTML = '';
+    });
+  </script>
+
+<!-- Initialize Google Map -->
+<!--<script>
+    var map;
+    function initMap() {
+      // Set your desired location; for example, Accra, Ghana:
+      var accra = {lat: 5.6037, lng: -0.1870};
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: accra,
+        zoom: 12
+      });
+      // Optionally add a marker:
+      new google.maps.Marker({
+        position: accra,
+        map: map
+      });
+    }
+    
+    // When the modal is shown, trigger a map resize event:
+    var myModalEl = document.getElementById('staticBackdrop');
+    myModalEl.addEventListener('shown.bs.modal', function () {
+      // Trigger map resize to ensure it displays correctly
+      google.maps.event.trigger(map, "resize");
+      // Recenter the map if needed
+      map.setCenter({lat: 5.6037, lng: -0.1870});
+    });
+  </script>
+-->
+  <!--Load the Google Maps API (replace YOUR_API_KEY with your actual API key) -->
+ <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>-->
+
+</body>
+</html>

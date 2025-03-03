@@ -184,27 +184,41 @@
         </a>
   
   <!-- Google Map Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg"> <!-- using modal-lg for a larger map view -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 text-success" id="staticBackdropLabel">Find Recycling Centers Around You</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- The map will be loaded into this div --><!--Due to API cost. Actual implementation disaplayed temporary. LOL :)-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 text-success" id="staticBackdropLabel">Find Recycling Centers Around You</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Progress Bar -->
+                <div id="loading" style="width: 100%; background-color: #f3f3f3; height: 5px; position: relative;">
+                    <div id="progress-bar" style="width: 0%; height: 30px; border-radius:5px; background-color: #28a745; color: #f3f3f3;"> &nbsp; Loading...</div>
+                </div>
+
+                <!-- Map Container -->
+                 <!-- The map will be loaded into this div --><!--Due to API cost. Actual implementation disaplayed temporary. LOL :)-->
           <!--<div id="map" style="height:400px; width:100%;"></div>-->
 
           <!--HArd coded map using Iframe 🤣 in your face google-->
-          <iframe class="ratio ratio-1x1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.70562949574!2d-1.632851562820679!3d6.672415471291539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb952b23159345%3A0x3583d0f584c61f52!2sEwaste%20Cycle%20Solutions!5e0!3m2!1sen!2sgh!4v1740358778151!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                <div style="position: relative;">
+                    <iframe id="mapFrame" class="ratio ratio-1x1"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.70562949574!2d-1.632851562820679!3d6.672415471291539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb952b23159345%3A0x3583d0f584c61f52!2sEwaste%20Cycle%20Solutions!5e0!3m2!1sen!2sgh!4v1740358778151!5m2!1sen!2sgh"
+                        width="100%" height="450" style="border:0; display: none;"
+                        allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
 
       </div>
@@ -331,8 +345,55 @@
                <div id="quizResult" class="mt-3"></div>
 
               <div class="text-center pb-5">
-                <button type="submit" class="btn btn-success me-3">Submit Quiz</button>
-                <button type="button" id="resetQuiz" class="btn btn-danger ">Reset Quiz</button>
+                
+
+                <!-- Submit trigger modal -->
+          <button type="button" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#submitModal">
+            Submit
+          </button>
+
+            <!-- Submit Modal -->
+            <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="submitModalLabel">Are you sure ?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Do you wish to submit your answers? Any unanswered question will be marked 0
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No, Cancel</button>
+                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Yes, Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                 <!-- Reset trigger modal -->
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#resetModal">
+            Reset Quiz
+          </button>
+
+            <!-- Reset Modal -->
+            <div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="resetModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-danger" id="resetModalLabel"> Reset Quiz</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Do you wish to clear your selected answers?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">No, Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="resetQuiz">Yes, Clear</button>
+                  </div>
+                </div>
+              </div>
+            </div>
               </div>
             </form>
         </div>
@@ -380,6 +441,34 @@
     document.getElementById('resetQuiz').addEventListener('click', function() {
       document.getElementById('quizForm').reset();
       document.getElementById('quizResult').innerHTML = '';
+    });
+  </script>
+
+  <!--Progress Bar Implementation-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var iframe = document.getElementById("mapFrame");
+        var progressBar = document.getElementById("progress-bar");
+        var loadingDiv = document.getElementById("loading");
+
+        let progress = 0;
+        let interval = setInterval(() => {
+            if (progress >= 90) {
+                clearInterval(interval);
+            } else {
+                progress += 10;
+                progressBar.style.width = progress + "%";
+            }
+        }, 300);
+
+        iframe.onload = function () {
+            clearInterval(interval);
+            progressBar.style.width = "100%";
+            setTimeout(() => {
+                loadingDiv.style.display = "none"; // Hide progress bar
+                iframe.style.display = "block"; // Show the iframe
+            }, 300);
+        };
     });
   </script>
 

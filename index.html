@@ -42,10 +42,11 @@
   <section id="intro" style="padding: 60px; ">
     <div class="row justify-content-center py-3 mt-2">
       <div class="col-md-5 py-5 mt-1 text-center text-md-start">
-        <h1>
-          <div class="display-1 text-success">EcoCycle</div>
-          <div class="display-6 text-muted">Recycle Right, every time!</div>
-        </h1>
+        <div class="hero-card">
+          <h1>
+            <div class="display-1">EcoCycle</div>
+            <div class="display-6">Recycle Right, every time!</div>
+          </h1>
         <p class="lead my-4 text-muted lh-base">
           Make a positive impact on our planet today with our easy to use recycling guide.
           Learn what you can recycle, how to prepare it and where to take it. <br>
@@ -54,6 +55,30 @@
         <a href="#HowToRecycle" class="btn btn-success shadow btn-lg m-1">
           <i class="bi bi-recycle p-1"></i> Show me how
         </a>
+          <div class="d-flex hero-stats mt-3 flex-wrap">
+            <div class="stat-card">
+              <i class="bi bi-arrow-counterclockwise"></i>
+              <div>
+                <div class="value">Reduce</div>
+                <div class="label">Waste by reusing</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="bi bi-recycle"></i>
+              <div>
+                <div class="value">Recycle</div>
+                <div class="label">Sort & prepare items</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="bi bi-tree-fill"></i>
+              <div>
+                <div class="value">Compost</div>
+                <div class="label">Turn organics into soil</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-5 py-1 mt-1 text-center d-none d-md-block">
         <img width="500" height="500" src="assests/recycle1.png" alt="recycle-sign"/>
@@ -71,100 +96,64 @@
       <p class="lead text-center text-secondary">
         click on each section to view recycling guidelines
       </p>
-      <div class="accordion accordion-flush" id="recycleAccordion">
+      <div class="recycle-grid" id="recycleAccordion">
         <!-- Plastic -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingPlastic">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlastic" aria-expanded="false" aria-controls="collapsePlastic">
-                <i class="bi bi-dice-1-fill fs-3 text-danger"></i> &nbsp; Plastic 
-            </button>
-          </h2>
-          <div id="collapsePlastic" class="accordion-collapse collapse" aria-labelledby="headingPlastic" data-bs-parent="#recycleAccordion">
-            <div class="accordion-body">
-              <strong class="text-danger">Plastic ( Harmful ):</strong> Rinse containers to remove food residue, remove caps if required, and flatten items to save space. Always check the recycling code (typically a number inside a triangle) to determine if it’s accepted by your local recycling program. <br>
-                  <ul class="mt-2">
-                    <li class="py-2"><strong>Prepare:</strong> Rinse out food residue from bottles, containers, and packaging. Remove lids, labels, and any non-plastic parts.</li>
-                    <li class="py-2"><strong>Bag:</strong> Allow items to dry completely, then place them in a clear, designated recycling bag or container (avoid overfilling).</li>
-                    <li class="py-2"><strong>Recycle:</strong> Place the bag into your curbside recycling bin or drop it off at a local recycling center that accepts plastics. Check local guidelines for specific sorting and recycle limits.</li>
-                  </ul>
-            </div>
-          </div>
+        <div class="recycle-item">
+          <div class="title"><i class="bi bi-dice-1-fill text-danger fs-3"></i> Plastic <span class="badge ms-auto">Harmful</span></div>
+          <p><strong>Plastic:</strong> Rinse containers to remove food residue, remove caps if required, and flatten items to save space. Always check the recycling code (typically a number inside a triangle) to determine if it’s accepted by your local recycling program.</p>
+          <ul>
+            <li><strong>Prepare:</strong> Rinse out food residue from bottles, containers, and packaging. Remove lids, labels, and any non-plastic parts.</li>
+            <li><strong>Bag:</strong> Allow items to dry completely, then place them in a clear, designated recycling bag or container (avoid overfilling).</li>
+            <li><strong>Recycle:</strong> Place the bag into your curbside recycling bin or drop it off at a local recycling center that accepts plastics. Check local guidelines for specific sorting and recycle limits.</li>
+          </ul>
         </div>
         <!-- Wood -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingWood">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWood" aria-expanded="false" aria-controls="collapseWood">
-                <i class="bi bi-dice-1-fill fs-3 text-primary"></i> &nbsp; Wood 
-            </button>
-          </h2>
-          <div id="collapseWood" class="accordion-collapse collapse" aria-labelledby="headingWood" data-bs-parent="#recycleAccordion">
-            <div class="accordion-body">
-              <strong class="text-primary">Wood (Enviromentally safe):</strong> Only recycle untreated, clean wood. Treated or painted wood may contain chemicals and should be disposed of through specialized facilities. When possible, consider repurposing wood for DIY projects or contact local centers to see if they offer wood chipping or mulch recycling services.
-              <ul class="mt-2">
-                <li class="py-2"><strong>Prepare:</strong> Remove nails, screws, and any metal hardware from scrap wood. Cut or break larger pieces into smaller, manageable sizes if needed.</li>
-                <li class="py-2"><strong>Bag:</strong> Large wood pieces typically aren’t bagged; however, small wood scraps can be bundled or placed in a paper bag if your recycling program requires it.</li>
-                <li class="py-2"><strong>Recycle:</strong> Bring the wood to a facility that accepts wood waste or consider repurposing it (e.g., as mulch or for DIY projects).</li>
-              </ul>
-            </div>
-          </div>
+        <div class="recycle-item">
+          <div class="title"><i class="bi bi-dice-1-fill text-primary fs-3"></i> Wood <span class="badge ms-auto">Safe</span></div>
+          <p><strong>Wood:</strong> Only recycle untreated, clean wood. Treated or painted wood may contain chemicals and should be disposed of through specialized facilities. When possible, consider repurposing wood for DIY projects or contact local centers to see if they offer wood chipping or mulch recycling services.</p>
+          <ul>
+            <li><strong>Prepare:</strong> Remove nails, screws, and any metal hardware from scrap wood. Cut or break larger pieces into smaller, manageable sizes if needed.</li>
+            <li><strong>Bag:</strong> Large wood pieces typically aren’t bagged; however, small wood scraps can be bundled or placed in a paper bag if your recycling program requires it.</li>
+            <li><strong>Recycle:</strong> Bring the wood to a facility that accepts wood waste or consider repurposing it (e.g., as mulch or for DIY projects).</li>
+          </ul>
         </div>
         <!-- Metal -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingMetal">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMetal" aria-expanded="false" aria-controls="collapseMetal">
-                <i class="bi bi-dice-1-fill fs-3 text-warning"></i> &nbsp; Metal 
-            </button>
-          </h2>
-          <div id="collapseMetal" class="accordion-collapse collapse" aria-labelledby="headingMetal" data-bs-parent="#recycleAccordion">
-            <div class="accordion-body">
-              <strong class="text-warning">Metal (Harmful):</strong> Metals like aluminum and steel are highly recyclable. Rinse containers to remove food residue and, if recommended, crush them to save space. Some facilities may require you to sort metals by type. Check with your local recycling center for specific instructions.
-              <ul class="mt-2">
-                <li class="py-2"><strong>Prepare:</strong> Clean metal cans and containers by rinsing away any residues. Flatten aluminum cans to save space.</li>
-                <li class="py-2"><strong>Bag:</strong> For smaller metal items, place them into a paper bag (plastic bags can trap contaminants) or collect them loose in a dedicated container.</li>
-                <li class="py-2"><strong>Recycle:</strong> Deposit metals in the metal/recycling bin if your local service accepts them, or take them to a scrap metal collection center.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="recycle-item">
+          <div class="title"><i class="bi bi-dice-1-fill text-warning fs-3"></i> Metal <span class="badge ms-auto">Recyclable</span></div>
+          <p><strong>Metal:</strong> Metals like aluminum and steel are highly recyclable. Rinse containers to remove food residue and, if recommended, crush them to save space. Some facilities may require you to sort metals by type. Check with your local recycling center for specific instructions.</p>
+          <ul>
+            <li><strong>Prepare:</strong> Clean metal cans and containers by rinsing away any residues. Flatten aluminum cans to save space.</li>
+            <li><strong>Bag:</strong> For smaller metal items, place them into a paper bag (plastic bags can trap contaminants) or collect them loose in a dedicated container.</li>
+            <li><strong>Recycle:</strong> Deposit metals in the metal/recycling bin if your local service accepts them, or take them to a scrap metal collection center.</li>
+          </ul>
         </div>
         <!-- Organic -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOrganic">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOrganic" aria-expanded="false" aria-controls="collapseOrganic">
-                <i class="bi bi-dice-1-fill fs-3 text-success"></i> &nbsp; Organic (Food & Yard Waste)
-            </button>
-          </h2>
-          <div id="collapseOrganic" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#recycleAccordion">
-            <div class="accordion-body">
-              <strong class="text-success">Organic (Potential bio-hazard):</strong> Organic waste such as food scraps, yard trimmings, and paper can be composted rather than sent to a landfill. Use a backyard compost bin or take advantage of community curbside compost programs. Composting turns waste into nutrient-rich soil for gardening.
-              <ul class="mt-2">
-                <li class="py-2"><strong>Prepare:</strong> Separate organic waste (e.g., food scraps, yard trimmings) from non-compostables. Chop larger items into smaller pieces to speed up decomposition.</li>
-                <li class="py-2"><strong>Bag:</strong> Use a compostable bag or add the organic waste directly to your compost bin.</li>
-                <li class="py-2"><strong>Recycle:</strong> For home composting, add to your compost pile; otherwise, follow local guidelines for organic waste recycling or drop off at a community compost facility.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="recycle-item">
+          <div class="title"><i class="bi bi-dice-1-fill text-success fs-3"></i> Organic <span class="badge ms-auto">Compost</span></div>
+          <p><strong>Organic:</strong> Organic waste such as food scraps, yard trimmings, and paper can be composted rather than sent to a landfill. Use a backyard compost bin or take advantage of community curbside compost programs. Composting turns waste into nutrient-rich soil for gardening.</p>
+          <ul>
+            <li><strong>Prepare:</strong> Separate organic waste (e.g., food scraps, yard trimmings) from non-compostables. Chop larger items into smaller pieces to speed up decomposition.</li>
+            <li><strong>Bag:</strong> Use a compostable bag or add the organic waste directly to your compost bin.</li>
+            <li><strong>Recycle:</strong> For home composting, add to your compost pile; otherwise, follow local guidelines for organic waste recycling or drop off at a community compost facility.</li>
+          </ul>
         </div>
         <!-- Glass -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="headingGlass">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGlass" aria-expanded="false" aria-controls="collapseGlass">
-                  <i class="bi bi-dice-1-fill fs-3 text-secondary"></i> &nbsp; Glass
-              </button>
-            </h2>
-            <div id="collapseGlass" class="accordion-collapse collapse" aria-labelledby="headingGlass" data-bs-parent="#recycleAccordion">
-              <div class="accordion-body">
-                <strong class="text-secondary">Glass (Caution when handling):</strong> Glass is 100% recyclable and can be recycled endlessly without loss of quality, but proper preparation is key.
-                <ul class="mt-2">
-                    <li class="py-2"><strong>Prepare:</strong> Rinse glass containers thoroughly to remove any food or liquid residues.</li>
-                    <li class="py-2"><strong>Bag:</strong> Many local facilities require you to sort glass by color (clear, green, brown) for efficient processing—check your local guidelines.</li>
-                    <li class="py-2"><strong>Recycle:</strong> Remove any lids, caps, or non-glass attachments; these may need to be recycled separately.</li>
-                    <li class="py-2"><strong>Extra Tip: </strong> Avoid placing broken glass in bins. Use a sturdy container for drop-off to minimize breakage and injury risks.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="recycle-item">
+          <div class="title"><i class="bi bi-dice-1-fill text-secondary fs-3"></i> Glass <span class="badge ms-auto">Handle Carefully</span></div>
+          <p><strong>Glass:</strong> Glass is 100% recyclable and can be recycled endlessly without loss of quality, but proper preparation is key.</p>
+          <ul>
+            <li><strong>Prepare:</strong> Rinse glass containers thoroughly to remove any food or liquid residues.</li>
+            <li><strong>Bag:</strong> Many local facilities require you to sort glass by color (clear, green, brown) for efficient processing—check your local guidelines.</li>
+            <li><strong>Recycle:</strong> Remove any lids, caps, or non-glass attachments; these may need to be recycled separately.</li>
+            <li><strong>Extra Tip:</strong> Avoid placing broken glass in bins. Use a sturdy container for drop-off to minimize breakage and injury risks.</li>
+          </ul>
+        </div>
+      </div>
       </div>
     </div>
+
+  <!-- Floating CTA -->
+  <a href="#Location" class="fab" title="Find a center near you"><i class="bi bi-geo-alt-fill"></i> Locate</a>
   </section>
 
   <!--Location Centers Near Me-->
@@ -234,6 +223,11 @@
         <div class="row">
             <h2 class="text-center text-success">Recycling Quiz</h2>
             <p class="lead text-center text-muted">Feeling positive about keeping our planet healthy? &nbsp;😊 <br>Take a short quiz to test your recycling knowledge!</p>
+            <div class="col-12 d-flex justify-content-center mb-3">
+              <div class="quiz-card w-100" style="max-width:920px">
+                <p class="text-muted small">Answer the 5 questions below and submit to see your score.</p>
+              </div>
+            </div>
             <form id="quizForm">
                 <div class="col justify-content-center">
                    <!-- Question 1 -->
@@ -406,6 +400,22 @@
       <p class="lead text-secondary"> <h6>Designed and Developed by Etornam Kordzo Ahiataku - 3366422</h6></p>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container-lg">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <strong>EcoCycle</strong> — Helping you recycle right.
+        </div>
+        <div class="col-md-6 text-md-end text-center">
+          <a href="#" class="text-muted me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-muted me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-muted"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

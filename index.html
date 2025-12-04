@@ -12,53 +12,13 @@
 </head>
 <body class="bg-light">
   <!--Navigation-->
-  <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top shadow">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand justify-content-center fw-semibold">
-        <img width="40" height="40" src="https://img.icons8.com/clouds/100/recycle-sign.png" alt="recycle-sign"/> EcoCycle
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-           <ul class="navbar-nav justify-content-end">
-             <li class="nav-item" title="See recycling guidelines">
-               <a href="#HowToRecycle" class="nav-link fw-semibold"><i class="bi bi-recycle text-success"></i> How To Recycle</a>
-             </li>
-             <li class="nav-item" title="Find a center near you">
-               <a href="#Location" class="nav-link fw-semibold"><i class="bi bi-geo-alt-fill text-success"></i> Center Near Me</a>
-             </li>
-             <li class="nav-item" title="Take a Quiz on recycling">
-               <a href="#quiz" class="nav-link fw-semibold"><i class="bi bi-patch-question-fill text-success"></i> Quiz</a>
-             </li>
-           </ul>
-      </div>
-    </div>
+  <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top shadow ">
+    <!-- check the script.js for the rendering -->
   </nav>
 
   <!--Headline-->
-  <section id="intro" style="padding: 60px; ">
-    <div class="row justify-content-center py-3 mt-2">
-      <div class="col-md-5 py-5 mt-1 text-center text-md-start">
-        <h1>
-          <div class="display-1 text-success">EcoCycle</div>
-          <div class="display-6 text-muted">Recycle Right, every time!</div>
-        </h1>
-        <p class="lead my-4 text-muted lh-base">
-          Make a positive impact on our planet today with our easy to use recycling guide.
-          Learn what you can recycle, how to prepare it and where to take it. <br>
-          Get started today and join the EcoCycle movement towards a more sustainable future.
-        </p>
-        <a href="#HowToRecycle" class="btn btn-success shadow btn-lg m-1">
-          <i class="bi bi-recycle p-1"></i> Show me how
-        </a>
-      </div>
-      <div class="col-md-5 py-1 mt-1 text-center d-none d-md-block">
-        <img width="500" height="500" src="assests/recycle1.png" alt="recycle-sign"/>
-      </div>
-    </div>
+  <section id="intro" style="padding: 60px; " >
+    <!-- rendering inside script.js -->
   </section>
 
   <!--How to recycle-->
@@ -455,7 +415,7 @@
 
         let progress = 0;
         let interval = setInterval(() => {
-            if (progress >= 90) {
+            if (progress >= 100) {
                 clearInterval(interval);
             } else {
                 progress += 10;
@@ -473,36 +433,7 @@
         };
     });
   </script>
-
-<!-- Initialize Google Map -->
-<!--<script>
-    var map;
-    function initMap() {
-      // Set your desired location; for example, Accra, Ghana:
-      var accra = {lat: 5.6037, lng: -0.1870};
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: accra,
-        zoom: 12
-      });
-      // Optionally add a marker:
-      new google.maps.Marker({
-        position: accra,
-        map: map
-      });
-    }
-    
-    // When the modal is shown, trigger a map resize event:
-    var myModalEl = document.getElementById('staticBackdrop');
-    myModalEl.addEventListener('shown.bs.modal', function () {
-      // Trigger map resize to ensure it displays correctly
-      google.maps.event.trigger(map, "resize");
-      // Recenter the map if needed
-      map.setCenter({lat: 5.6037, lng: -0.1870});
-    });
-  </script>
--->
-  <!--Load the Google Maps API (replace YOUR_API_KEY with your actual API key) -->
- <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>-->
+  <script src="script.js"></script>
 
 </body>
 </html>

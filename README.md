@@ -44,7 +44,7 @@ Users can click on each category to view recycling guidelines and preparation ti
 ## 2. Recycling Center Locator
 The website includes a section that helps users locate nearby recycling centers. A "Locate Now" button is provided which can be extended to integrate with mapping services such as Google Maps or browser geolocation APIs.
 
-This feature is intended to make it easier for users to identify where they can properly dispose of recyclable materials.
+This feature is intended to make it easier for users to identify where they can properly dispose of recyclable materials. It is under development for now, kindly check back frequently to see updates 🙂‍↕️🎮
 
 ---
 
@@ -113,7 +113,8 @@ The design of EcoCycle focuses on:
 - Simplicity and clarity
 - Minimalist eco-themed aesthetics
 - Easy navigation
-- Educational accessibility
+- Educational accessibility 
+
 
 The layout uses a clean structure with soft green color tones to visually reinforce the environmental theme.
 
@@ -146,7 +147,7 @@ Possible future enhancements include:
 # Author
 
 **Etornam Kordzo Ahiataku**  
-Student ID: 3366422
+Student ID: 336**22
 
 Designed and developed as part of an academic project.
 
